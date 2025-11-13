@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Meta descripción para SEO -->
+  <meta name="description" content="MNEMONIC Shop Online: Tecnología, moda y accesorios de calidad. Descubre nuestros productos y síguenos en Instagram o contáctanos por WhatsApp.">
+  
+  <!-- Meta tag de verificación Google Search Console -->
+  <meta name="google-site-verification" content="AQUI_VA_TU_CODIGO_DE_VERIFICACION" />
+  
+  <!-- Open Graph / Facebook & Instagram -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MNEMONIC Shop Online">
+  <meta property="og:description" content="Tecnología, moda y accesorios de calidad. Descubre nuestros productos y síguenos en Instagram o contáctanos por WhatsApp.">
+  <meta property="og:image" content="Img/fondo-productos.jpg"> <!-- Cambia por tu imagen -->
+  <meta property="og:url" content="https://www.tusitioweb.com"> <!-- Cambia por tu URL real -->
+  
+  <!-- Favicon (opcional) -->
+  <link rel="icon" href="Img/favicon.ico" type="image/x-icon">
+  
+  <title>MNEMONIC Shop Online</title>
+  
+  <style>
+    /* --- ESTILOS CSS AQUÍ --- */
+  </style>
+</head>
+  <style>
+    /* --- ESTILOS GENERALES --- */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    /* --- HEADER --- */
+    header {
+      background-image: url('Img/img tienda para mujeres.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+
+    header h1 { font-size: 3.5em; margin: 0; }
+    header p { font-size: 1.5em; margin-top: 15px; }
+
+    /* --- NAVEGACIÓN --- */
+    nav {
+      background-color: #002244;
+      text-align: center;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover { color: #ffcc00; }
+
+    /* --- SECCIONES --- */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h2 { color: #003366; font-size: 2em; margin-bottom: 20px; }
+
+    /* --- FONDO PARALLAX PARA PRODUCTOS Y SOBRE NOSOTROS --- */
+    .fondo-parallax {
+      background-image: url('Img/fondo-productos.jpg'); /* tu imagen de fondo */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed; /* efecto parallax */
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      color: #f1f1f1;
+      text-align: center;
+    }
+
+    .fondo-parallax::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(50,50,50,0.5); /* oscuro semi-transparente */
+      z-index: 0;
+    }
+
+    .fondo-parallax h2,
+    .fondo-parallax p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .fondo-parallax h2 { text-shadow: 2px 2px 5px rgba(0,0,0,0.6); }
+    .fondo-parallax p { text-shadow: 1px 1px 3px rgba(0,0,0,0.5); color: #cce0ff; }
+
+    /* --- PRODUCTOS --- */
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .producto {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      width: 280px;
+      padding: 20px;
+      transition: transform 0.4s, box-shadow 0.4s, backdrop-filter 0.4s;
+    }
+
+    .producto:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+      backdrop-filter: blur(2px);
+    }
+
+    .producto img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      transition: transform 0.4s;
+    }
+
+    .producto img:hover { transform: scale(1.05); }
+
+    .producto h3 { color: #004aad; font-size: 1.3em; margin-bottom: 10px; transition: color 0.3s; }
+    .producto h3:hover { color: #ff9900; }
+
+    .producto p { font-size: 1em; color: #333; line-height: 1.4; transition: color 0.3s; }
+    .producto p:hover { color: #222; }
+
+    /* --- BOTONES --- */
+    .btn-instagram, .btn-whatsapp {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+    }
+
+    .btn-instagram { background-color: #C13584; }
+    .btn-instagram:hover { background-color: #e7549f; }
+
+    .btn-whatsapp { background-color: #25D366; }
+    .btn-whatsapp:hover { background-color: #1ebe57; }
+
+    /* --- CONTACTO --- */
+    #contacto { background-color: #f0f0f0; padding: 40px 20px; text-align: center; }
+    #contacto h2 { color: #1E3A8A; margin-bottom: 10px; }
+    #contacto ul { list-style: none; padding: 0; margin: 0; }
+    #contacto li { font-size: 15px; margin: 5px 0; }
+
+    /* --- FOOTER --- */
+    footer { background-color: #002244; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    .redes { text-align: center; margin-top: 15px; }
+    .redes img { margin: 0 10px; transition: transform 0.3s; }
+    .redes img:hover { transform: scale(1.2); }
+    .siguenos { text-align: center; margin-top: 20px; font-size: 1.2em; color: #0044cc; font-weight: 700; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
+
+    @media (max-width: 768px) { .productos { flex-direction: column; align-items: center; } }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header id="inicio">
+    <h1>MNEMONIC Shop Online</h1>
+    <p>Tecnología, moda y estilo en un solo lugar</p>
+  </header>
+
+  <!-- NAVEGACIÓN -->
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#nosotros">Sobre Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <!-- SECCIÓN PARALLAX -->
+  <div class="fondo-parallax">
+
+    <!-- PRODUCTOS DESTACADOS -->
+    <section id="productos">
+      <h2>Productos Destacados</h2>
+      <div class="productos">
+        <div class="producto">
+          <img src="Img/img Tecnologia.jpg" alt="Tecnología">
+          <h3>Tecnología</h3>
+          <p>Smartphones, auriculares, laptops y más. Calidad garantizada.</p>
+          <a href="https://chat.whatsapp.com/J6cu3WVMXz8JEHZsh9ktUU?mode=wwt" target="_blank" class="btn-whatsapp">Ver en WhatsApp</a>
+        </div>
+        <div class="producto">
+          <img src="Img/imag Smartphones y Gadgets 2.jpg" alt="Smartphones y Gadgets">
+          <h3>Smartphones y Gadgets</h3>
+          <p>Últimos modelos de smartphones, auriculares y gadgets tecnológicos.</p>
+          <a href="https://chat.whatsapp.com/J6cu3WVMXz8JEHZsh9ktUU?mode=wwt" target="_blank" class="btn-whatsapp">Ver en WhatsApp</a>
+        </div>
+        <div class="producto">
+          <img src="Img/img Relojes Elegantes.jgp.jpeg" alt="Relojes Elegantes">
+          <h3>Relojes Elegantes</h3>
+          <p>Descubre nuestra colección de relojes modernos para cada ocasión.</p>
+          <a href="https://chat.whatsapp.com/J6cu3WVMXz8JEHZsh9ktUU?mode=wwt" target="_blank" class="btn-whatsapp">Ver en WhatsApp</a>
+        </div>
+        <div class="producto">
+          <img src="Img/img Ropa.jpg" alt="Ropa">
+          <h3>Ropa</h3>
+          <p>Moda para mujeres, hombres y niños. Estilo para cada ocasión.</p>
+          <a href="https://www.instagram.com/big_mariolaedu" target="_blank" class="btn-instagram">Ver en Instagram</a>
+        </div>
+        <div class="producto">
+          <img src="Img/img Accesorios.jpeg" alt="Accesorios">
+          <h3>Accesorios</h3>
+          <p>Accesorios modernos y elegantes para mujeres y hombres.</p>
+          <a href="https://www.instagram.com/big_mariolaedu" target="_blank" class="btn-instagram">Ver en Instagram</a>
+        </div>
+        <div class="producto">
+          <img src="Img/img Chaquetas.jpeg" alt="Chaquetas">
+          <h3>Chaquetas</h3>
+          <p>Chaquetas modernas y cómodas para todos los estilos y temporadas.</p>
+          <a href="https://www.instagram.com/big_mariolaedu" target="_blank" class="btn-instagram">Ver en Instagram</a>
+        </div>
+        <div class="producto">
+          <img src="Img/img Zapatos.jpg" alt="Zapatos">
+          <h3>Zapatos</h3>
+          <p>Calzado cómodo y moderno para todas las edades y estilos.</p>
+          <a href="https://www.instagram.com/big_mariolaedu" target="_blank" class="btn-instagram">Ver en Instagram</a>
+        </div>
+        <div class="producto">
+          <img src="Img/imag bolsos modernos.jpeg" alt="Bolsos Modernos">
+          <h3>Bolsos Modernos</h3>
+          <p>Bolsos elegantes y prácticos diseñados para combinar estilo y funcionalidad.</p>
+          <a href="https://www.instagram.com/big_mariolaedu" target="_blank" class="btn-instagram">Ver en Instagram</a>
+        </div>
+        <div class="producto">
+          <img src="Img/img Moda Casual 1.jpg" alt="Moda Casual">
+          <h3>Moda Casual</h3>
+          <p>Ropa moderna para mujeres, hombres y niños, ideal para cada ocasión.</p>
+          <a href="https://www.instagram.com/big_mariolaedu" target="_blank" class="btn-instagram">Ver en Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="nosotros">
+      <h2>Sobre Nosotros</h2>
+      <p>
+        MNEMONIC Shop nació con la idea de ofrecer productos tecnológicos y de moda que combinen estilo, innovación y calidad.
+        Nuestro objetivo es brindar a cada cliente una experiencia de compra única, donde pueda encontrar lo mejor en tecnología, ropa y accesorios modernos.
+      </p>
+    </section>
+
+  </div> <!-- FIN PARALLAX -->
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tienes alguna pregunta o quieres más información sobre nuestros productos?</p>
+    <ul>
+      <li><strong>Teléfono:</strong> +86 187 8472 3029</li>
+      <li><strong>Email:</strong> mariolantongonoedu@icloud.com</li>
+      <li><strong>Dirección:</strong> Nanchong, China</li>
+    </ul>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 MNEMONIC Shop Online | Todos los derechos reservados</p>
+    <p>
+      <a href="mailto:mariolantongonoedu@icloud.com" style="color:#ffcc00;">mariolantongonoedu@icloud.com</a> |
+      <a href="tel:+8618784723029" style="color:#ffcc00;">+86 187 8472 3029</a>
+    </p>
+
+    <div class="redes">
+      <a href="https://www.facebook.com/profile.php?id=61556301873579" target="_blank"><img src="icono/facebook.png" alt="Facebook" width="40"></a>
+      <a href="https://www.instagram.com/big_mariolaedu" target="_blank"><img src="icono/icono instagram1.png" alt="Instagram" width="40"></a>
+      <a href="https://chat.whatsapp.com/J6cu3WVMXz8JEHZsh9ktUU" target="_blank"><img src="icono/icono whatsapp1.png" alt="WhatsApp" width="40"></a>
+    </div>
+
+    <p class="siguenos">Síguenos para conocer nuestras últimas novedades, promociones y nuevos productos.</p>
+  </footer>
+</body>
+</html>
